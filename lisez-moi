@@ -1,0 +1,2 @@
+Renommer web-master par web.
+Mettre ce dossier dans le dossier "www" du serveur HTTP (peu importe le serveur, j'ai utilisé EasyPHP et/ou xampp ).

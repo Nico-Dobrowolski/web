@@ -48,16 +48,16 @@ class Data_Model extends CI_Model
 
 		$lieu = get_cookie('lieu');
 		if(is_null($lieu)){$lieu = "PARIS,FR";}
-		$data_json_weather = file_get_contents('http://api.weatherbit.io/v2.0/forecast/daily?city='.$lieu.'&key=IdKey&days=7&lang=fr'); 
+		$data_json_weather = file_get_contents('http://api.weatherbit.io/v2.0/forecast/daily?city='.$lieu.'&key=642daad000b84f20bc942d91bbac593e&days=7&lang=fr'); 
 		if ($data_json_weather == NULL) {
-			$data_json_weather = file_get_contents('http://api.weatherbit.io/v2.0/forecast/daily?city=Paris,FR&key=IdKey&days=7&lang=fr');
+			$data_json_weather = file_get_contents('http://api.weatherbit.io/v2.0/forecast/daily?city=Paris,FR&key=642daad000b84f20bc942d91bbac593e&days=7&lang=fr');
 		}
 		
 		$data_obj = json_decode($data_json_weather);
 		$only_countrycode = $data_obj->country_code; // only_countrycode exemple fr
-		$data_json_news = file_get_contents('http://newsapi.org/v2/top-headlines?country='.$only_countrycode.'&apiKey=IdKey');
+		$data_json_news = file_get_contents('http://newsapi.org/v2/top-headlines?country='.$only_countrycode.'&apiKey=0d4a27122b994b9193c380237fca22fd');
 		if ($data_json_news == NULL) {
-			$data_json_news = file_get_contents('http://newsapi.org/v2/top-headlines?country=fr&apiKey=IdKey');
+			$data_json_news = file_get_contents('http://newsapi.org/v2/top-headlines?country=fr&apiKey=0d4a27122b994b9193c380237fca22fd');
 		}
 		$data_obj_all_news = json_decode($data_json_news);
 		return $data_obj_all_news;
