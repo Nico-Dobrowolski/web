@@ -4,8 +4,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <title>Projet - News&Weather</title>
     <!-- Bootsrat Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -27,7 +25,6 @@
     
 <div class="container w-50">
 
-  <!--<?php //echo var_dump($object_weather) ?> -->
   <?php for ($days = 1; $days != 7; $days++){ ?> 
   <!----------------------------------------- Boucle for pour 6 jours  -->
   <div class="card shadow-lg">
@@ -47,7 +44,7 @@
             <p> <img class="rounded mx-auto d-block img-fluid " src= <?php echo $icone_part1.$icone_part2.$icone_part3 ;?> alt="icone météo" >  </p>
           </li>
           <li class="text-warning text-center">
-            <p><a href="#" class="text-dark"> <?php echo $object_weather->data[0]->weather->description;?> </a></p>
+            <p><a class="text-dark"> <?php echo $object_weather->data[0]->weather->description;?> </a></p>
           </li>
         </div>
         <div class="col-sm-6 ">
